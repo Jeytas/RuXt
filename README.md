@@ -15,7 +15,7 @@ This program uses your command line to do the work. It is basically a lot of sho
 + "unrar"
 
 ### Usage notes
-The goal of this program is to have one set of commands for all the common compressed file format, which means that you will only need to remember one set of commands to be able to (de)compress virtually any file.
+The goal of this program is to have one set of commands for all the common compressed file format, which means that you will only need to remember one set of commands to be able to (de)compress virtually any file. Should you need some quick overview of all the commands and some help, please use the `-h` flag (`xt -h`)
 
 ### Extract / Decompress
 In order to decompress a file, simple type the following
