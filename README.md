@@ -1,6 +1,5 @@
-# RubyFileCompression
+# RuXt - A Ruby Extractor (and more)
 ## What is this?
-
 This is a little program I am currently working on that is supposed to make the (de-)compressing of files easier. It will use one set of commands and thus makes it easier to compress or decompress files.
 
 ## Usage
@@ -20,7 +19,7 @@ The goal of this program is to have one set of commands for all the common compr
 
 ### Extract / Decompress
 In order to decompress a file, simple type the following
-`xt -e FILENAME`. This will extract all the contents of the archive into your current working directory (currently supported file formats are tar, zip, rar and 7z for decompression). If you want to extract the file into a specific folder, you can use the `d` flag as follows:
+`xt -e FILENAME`. This will extract all the contents of the archive into your current working directory (currently supported file formats are tar, zip, rar and 7z for decompression). If you want to extract the file into a specific folder, you can use the `-d` flag as follows:
 `xt -e FILENAME -d FOLDER`
 
 ### Compress
