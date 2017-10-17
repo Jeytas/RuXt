@@ -1,18 +1,19 @@
 Shoes.app(title: "Ruby Extraction Program RuXt", width: 600, height: 400) do
-  background white
+  background oldlace
 
   flow width: 0.3, height: 0.2, margin: 10 do
     button "Exit", width: 0.3, height: 0.5 do
       Shoes.quit()
     end
 
+  para "Mode: "
     list_box :items => ["Extract", "Compress"] do |e|
-       @cmd = e.text
+      @cmd = e.text
     end
   end
 
   stack margin: 10 do
-    background gainsboro
+    background lightblue
     subtitle "RuXt (Ruby Extractor)"
     tagline "GUI version 0.0.1"
   end
@@ -24,6 +25,7 @@ Shoes.app(title: "Ruby Extraction Program RuXt", width: 600, height: 400) do
     end
 
     button "Execute" do
+      if $filename == nil then @info.replace "This cannot be done without having a file selected" end
       case @cmd
       when "Extract"
         filetype  = $filename.partition(".").last
@@ -39,6 +41,9 @@ Shoes.app(title: "Ruby Extraction Program RuXt", width: 600, height: 400) do
               system("unrar e #{$filename} #{directory}")
             when "7z"
               system("7z x #{$filename} -o #{directory}")
+            else
+              alert("The selected file is a .#{filetype} and cannot be extracted")
+              @info.replace "The selected file is a .#{filetype} and cannot be extracted"
         end
 
       when "Compress"
@@ -48,7 +53,7 @@ Shoes.app(title: "Ruby Extraction Program RuXt", width: 600, height: 400) do
   end
 
   stack margin: 10 do
-    background gainsboro
+    background lightblue
     @info = para "No file selected"
   end
 end
