@@ -8,12 +8,20 @@ This is a little program I am currently working on that is supposed to make the 
 Firstly, I would highly recommend setting an alias in your .bashrc in order to be able to use this program more efficiently. Here is an example of an alias that will make "xt" be the same as "ruby extract.rb"
 `alias xt="ruby /full/path/to/file/extract.rb`. All commands that follow will be shown with "xt" instead of "ruby extract.rb".
 
-## Usage notes
+### Prerequisites
+This program uses your command line to do the work. It is basically a lot of shortcuts. If you want to be able to extract everything, you also need to install all the needed packages on your Linux machine, which are as follows:
++ "unzip" and "zip"
++ "7z" (7zip)
++ "tar"
++ "unrar"
+
+### Usage notes
 The goal of this program is to have one set of commands for all the common compressed file format, which means that you will only need to remember one set of commands to be able to (de)compress virtually any file.
 
 ### Extract / Decompress
 In order to decompress a file, simple type the following
-`xt -e FILENAME`. This will extract all the contents of the archive into your current working directory (currently supported file formats are tar, zip, rar and 7z for decompression)
+`xt -e FILENAME`. This will extract all the contents of the archive into your current working directory (currently supported file formats are tar, zip, rar and 7z for decompression). If you want to extract the file into a specific folder, you can use the `d` flag as follows:
+`xt -e FILENAME -d FOLDER`
 
 ### Compress
 Compressing a file is a little more complex, but still pretty straightforward (the way compressing works will most likely still change, so please refer back to this Github repository after each update).
