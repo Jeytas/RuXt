@@ -31,3 +31,9 @@ A short explanation of the flags:
 + `-t` is used to specify the type of format you want to use for compressing the files / folders (currently only tar and zip)
 + `n` specifies the name the archive should have (don't add any file endings)
 + `c` is the flag that indicates that the following file should be compressed and not extracted (`e`)
+
+### TODO
++ Create a simple GUI (with Ruby Shoes)
++ Implement, if possible, native Ruby decompressing and compressing (not dependend on operating system)
++ Create executeable files
++ Add installer (maybe also add xt as default shortcut into .bashrc
