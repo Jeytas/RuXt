@@ -32,8 +32,12 @@ A short explanation of the flags:
 + `n` specifies the name the archive should have (don't add any file endings)
 + `c` is the flag that indicates that the following file should be compressed and not extracted (`e`)
 
+### GUI (0.0.1)
+I have started working on a GUI that is neither good-looking nor very functional at the moment. However, you can try it out and I also added a screenshot of the program
+<img src="https://img2.picload.org/image/dgplcdri/2017-10-17-185904_600x400_scro.png"></img>
+
 ### TODO
-+ Create a simple GUI (with Ruby Shoes)
++ Create a simple GUI (with Ruby Shoes) [currently working on]
 + Implement, if possible, native Ruby decompressing and compressing (not dependend on operating system)
 + Create executeable files
 + Add installer (maybe also add xt as default shortcut into .bashrc
