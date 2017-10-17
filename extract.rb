@@ -7,11 +7,11 @@ require 'optparse'
 
 options = {}
 OptionParser.new do |opt|
-  opt.on('--extract FILENAME', '-e FILENAME') { |o| options[:filename], options[:cmd] = o, "ext" } #-e FILENAME will extract a given archive
+  opt.on('--extract FILENAME', '-e FILENAME', '-xt FILENAME') { |o| options[:filename], options[:cmd] = o, "ext" } #-e FILENAME will extract a given archive
   opt.on('--compress FILENAME', '-c FILENAME') { |o| options[:filename], options[:cmd] = o, "cps" } #-c FILENAME will compress a given file / folder
   opt.on('--type TYPE', '-t TYPE') { |o| options[:type_compress] = o } #Type of format that should be used to compress a given file
   opt.on('--name NAME', "-n NAME") { |o| options[:name_save] = o } #Name the newly created archive should have
-	opt.on('--direcotory DIR', '-d DIR') { |o| options[:directory] = o } #Directory a given archive should extract into
+	opt.on('--directory DIR', '-d DIR') { |o| options[:directory] = o } #Directory a given archive should extract into
   opt.on('--help', '-h') { puts "#{opt}\n To compress a file, you need three arguments: --type TYPE (the type of archive you want to create, i.e. tar) --name NAME (the name the archive should have) --compress FILENAME (the files or directory to compress)" }
 end.parse!
 
