@@ -1,0 +1,15 @@
+#+TITLE: Todo list
+#+OPTIONS: toc:nil
+* TODO Frontend
+- Perhaps use different windows for "Compress" and "Extract" modes (like in [[file:~/Documents/Programming/Ruby/reruTwi/][ReRuTwi]])
+
+* TODO Backend
+- Add native Ruby support for extracting other types of archives (tar.gz etc)
+- Add executeable files
+- Add easy installer
+
+
+
+ 
+
+

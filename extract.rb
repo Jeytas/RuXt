@@ -4,6 +4,7 @@
 #I recommend setting an alias to this .rb file in your .bashrc so it can be run without much hassle
 
 require 'optparse'
+require 'zip'
 
 options = {}
 OptionParser.new do |opt|
@@ -25,7 +26,17 @@ when "ext"
     when "tar.gz"
       if options[:directory] == nil then system("tar -xvzf #{options[:filename]}") else system("tar -xvzf #{options[:filename]} -C #{options[:directory]}") end
 		when "zip"
-			if options[:directory] == nil then system("unzip #{options[:filename]}") else system("unzip #{options[:filename]} -d #{options[:directory]}") end
+      Zip::File.open("#{options[:filename]}") do |zip_file|
+        # Handle entries one by one
+        zip_file.each do |entry|
+          # Extract to file/directory/symlink
+          puts "Extracting #{entry.name}"
+          entry.extract(options[:directory])
+
+          # Read into memory
+          content = entry.get_input_stream.read
+        end
+      end
 		when "rar"
 			if options[:directory] == nil then system("unrar e #{options[:filename]}") else system("unrar e #{options[:filename]} #{options[:directory]}") end
 		when "7z"

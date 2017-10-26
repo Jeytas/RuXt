@@ -1,3 +1,7 @@
+require 'shoes'
+require 'zip'
+require_relative 'lib/scripts/extract_zip.rb'
+
 Shoes.app(title: "Ruby Extraction Program RuXt", width: 600, height: 400) do
   background oldlace
 
@@ -36,7 +40,7 @@ Shoes.app(title: "Ruby Extraction Program RuXt", width: 600, height: 400) do
             when "tar.gz"
               system("tar -xvzf #{$filename} -C #{directory}")
             when "zip"
-              system("unzip #{$filename} -d #{directory}")
+              extract_zip($filename, directory)
             when "rar"
               system("unrar e #{$filename} #{directory}")
             when "7z"
@@ -44,10 +48,10 @@ Shoes.app(title: "Ruby Extraction Program RuXt", width: 600, height: 400) do
             else
               alert("The selected file is a .#{filetype} and cannot be extracted")
               @info.replace "The selected file is a .#{filetype} and cannot be extracted"
-        end
+          end
 
       when "Compress"
-
+        #TODO
       end
     end
   end
