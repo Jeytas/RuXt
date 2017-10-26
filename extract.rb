@@ -1,10 +1,11 @@
-#This is a small Ruby script that can be used to extract or compress an archive
+#This is a small Ruby script that can be usbd to extract or compress an archive
 #It can be used in the command line by appending the flags listed below (i.e. extract.rb --extract test.tar)
 #When compressing a file you need three arguments, --type TYPE --name NAME --compress FILENAME
 #I recommend setting an alias to this .rb file in your .bashrc so it can be run without much hassle
 
 require 'optparse'
 require 'zip'
+require_relative 'lib/scripts/extract_zip.rb'
 
 options = {}
 OptionParser.new do |opt|
@@ -26,17 +27,7 @@ when "ext"
     when "tar.gz"
       if options[:directory] == nil then system("tar -xvzf #{options[:filename]}") else system("tar -xvzf #{options[:filename]} -C #{options[:directory]}") end
 		when "zip"
-      Zip::File.open("#{options[:filename]}") do |zip_file|
-        # Handle entries one by one
-        zip_file.each do |entry|
-          # Extract to file/directory/symlink
-          puts "Extracting #{entry.name}"
-          entry.extract(options[:directory])
-
-          # Read into memory
-          content = entry.get_input_stream.read
-        end
-      end
+      if options[:directory] == nil then extract_zip(options[:filename], Dir.pwd) else extract_zip(options[:filename], options[:directory]) end
 		when "rar"
 			if options[:directory] == nil then system("unrar e #{options[:filename]}") else system("unrar e #{options[:filename]} #{options[:directory]}") end
 		when "7z"
