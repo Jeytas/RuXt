@@ -51,7 +51,7 @@ Shoes.app(title: "Ruby Extraction Program RuXt", width: 600, height: 400) do
           end
 
       when "Compress"
-        #TODO
+        #REFER TO TODO
       end
     end
   end
