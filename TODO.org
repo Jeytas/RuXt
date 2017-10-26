@@ -2,11 +2,14 @@
 #+OPTIONS: toc:nil
 * TODO Frontend
 - Perhaps use different windows for "Compress" and "Extract" modes (like in [[file:~/Documents/Programming/Ruby/reruTwi/][ReRuTwi]])
+- Rewrite frontend in GTK3
+- Add settings menu
 
 * TODO Backend
 - Add native Ruby support for extracting other types of archives (tar.gz etc)
 - Add executeable files
 - Add easy installer
+- Add settings support (like in ReRuTwi with a settings.yml file)
 
 
 

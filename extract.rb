@@ -1,4 +1,4 @@
-#This is a small Ruby script that can be usbd to extract or compress an archive
+#This is a small Ruby script that can be used to extract or compress an archive
 #It can be used in the command line by appending the flags listed below (i.e. extract.rb --extract test.tar)
 #When compressing a file you need three arguments, --type TYPE --name NAME --compress FILENAME
 #I recommend setting an alias to this .rb file in your .bashrc so it can be run without much hassle
