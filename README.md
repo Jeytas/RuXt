@@ -9,7 +9,7 @@ Firstly, I would highly recommend setting an alias in your .bashrc (or whatever 
 
 ### Prerequisites
 This program uses your command line to do the work. It is basically a lot of shortcuts. If you want to be able to extract everything, you also need to install all the needed packages on your Linux machine, which are as follows:
-+ "unzip" and "zip"
++ ~~"unzip" and "zip"~~ (No longer needed)
 + "7z" (7zip)
 + "tar"
 + "unrar"
