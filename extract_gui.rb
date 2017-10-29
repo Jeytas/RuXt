@@ -32,18 +32,17 @@ Shoes.app(title: "Ruby Extraction Program RuXt", width: 600, height: 400) do
       if $filename == nil then @info.replace "This cannot be done without having a file selected" end
       case @cmd
       when "Extract"
-        filetype  = $filename.partition(".").last
         directory = File.dirname($filename)
-          case filetype
-            when "tar"
+          case File.extname($filename)
+            when ".tar"
               system("tar -xfv #{$filename} -C #{directory}")
-            when "tar.gz"
+            when ".tar.gz"
               system("tar -xvzf #{$filename} -C #{directory}")
-            when "zip"
+            when ".zip"
               extract_zip($filename, directory)
-            when "rar"
+            when ".rar"
               system("unrar e #{$filename} #{directory}")
-            when "7z"
+            when ".7z"
               system("7z x #{$filename} -o #{directory}")
             else
               alert("The selected file is a .#{filetype} and cannot be extracted")

@@ -17,27 +17,25 @@ OptionParser.new do |opt|
   opt.on('--help', '-h') { puts "#{opt}\n To compress a file, you need three arguments: --type TYPE (the type of archive you want to create, i.e. tar) --name NAME (the name the archive should have) --compress FILENAME (the files or directory to compress)" }
 end.parse!
 
-filetype = options[:filename].partition(".").last
-
 case options[:cmd]
 when "ext"
-	case filetype
-		when "tar"
+	case File.extname(options[:filename])
+		when ".tar"
 			if options[:directory] == nil then system("tar -xfv #{options[:filename]}") else system("tar -xfv #{options[:filename]} -C #{options[:directory]}") end
-    when "tar.gz"
+    when ".tar.gz"
       if options[:directory] == nil then system("tar -xvzf #{options[:filename]}") else system("tar -xvzf #{options[:filename]} -C #{options[:directory]}") end
-		when "zip"
+		when ".zip"
       if options[:directory] == nil then extract_zip(options[:filename], Dir.pwd) else extract_zip(options[:filename], options[:directory]) end
-		when "rar"
+		when ".rar"
 			if options[:directory] == nil then system("unrar e #{options[:filename]}") else system("unrar e #{options[:filename]} #{options[:directory]}") end
-		when "7z"
+		when ".7z"
 			if options[:directory] == nil then system("7z x #{options[:filename]}") else system("7z x #{options[:filename]} -o #{options[:directory]}") end
 	end
 when "cps"
 	case options[:type_compress]
-		when "tar" || "tar.gz"
+		when ".tar" || "tar.gz"
 			system("tar -zcvf #{options[:name_save]}.tar.gz #{options[:filename]}")
-		when "zip"
+		when ".zip"
 			system("zip -r9 #{options[:name_save]}.zip #{options[:filename]}")
 	end
 end
