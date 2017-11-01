@@ -22,7 +22,7 @@ when "ext"
 	case File.extname(options[:filename])
 		when ".tar"
 			if options[:directory] == nil then system("tar -xfv #{options[:filename]}") else system("tar -xfv #{options[:filename]} -C #{options[:directory]}") end
-    when ".tar.gz"
+    when ".gz"
       if options[:directory] == nil then system("tar -xvzf #{options[:filename]}") else system("tar -xvzf #{options[:filename]} -C #{options[:directory]}") end
 		when ".zip"
       if options[:directory] == nil then extract_zip(options[:filename], Dir.pwd) else extract_zip(options[:filename], options[:directory]) end
@@ -33,9 +33,9 @@ when "ext"
 	end
 when "cps"
 	case options[:type_compress]
-		when ".tar" || "tar.gz"
+		when "tar" || "tar.gz"
 			system("tar -zcvf #{options[:name_save]}.tar.gz #{options[:filename]}")
-		when ".zip"
+		when "zip"
 			system("zip -r9 #{options[:name_save]}.zip #{options[:filename]}")
 	end
 end

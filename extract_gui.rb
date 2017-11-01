@@ -36,7 +36,7 @@ Shoes.app(title: "Ruby Extraction Program RuXt", width: 600, height: 400) do
           case File.extname($filename)
             when ".tar"
               system("tar -xfv #{$filename} -C #{directory}")
-            when ".tar.gz"
+            when ".gz"
               system("tar -xvzf #{$filename} -C #{directory}")
             when ".zip"
               extract_zip($filename, directory)
