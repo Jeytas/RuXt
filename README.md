@@ -2,10 +2,12 @@
 ## What is this?
 This is a little program I am currently working on that is supposed to make the (de-)compressing of files easier. It will use one set of commands and thus makes it easier to compress or decompress files.
 
+## Installer
+This program can be easily installed using the installer available as a Github Gist here: [Installer](https://gist.githubusercontent.com/Jeytas/c97300b44df3321d25411757ccae5399/raw/d1d246a220be98a1685978fc8473fa6f2529199d/installer.sh). It will clone the repository into `~/.ruxt` and automatically set an alias for you in your .bashrc (if you do not use bash, the installer won't work properly). It will add the alias to the last line of the .bashrc and you will then be able to easily access the terminal version of RuXt by just typing 'xt' instead of a lengthy path to the ruby file.
+
 ## Usage
 ### Preamble
-Firstly, I would highly recommend setting an alias in your .bashrc (or whatever shell you use) in order to be able to use this program more efficiently. Here is an example of an alias that will make "xt" be the same as "ruby extract.rb"
-`alias xt="ruby /full/path/to/file/extract.rb`. All commands that follow will be shown with "xt" instead of "ruby extract.rb".
+Please check whether the installation has finished correctly by typing `xt -h`. If you get some help regarding the program, then everything worked correctly.Please check whether the installation has finished correctly by typing `xt -h`. If you get some help regarding the program, then everything worked correctly.
 
 ### Prerequisites
 This program uses your command line to do the work. It is basically a lot of shortcuts. If you want to be able to extract everything, you also need to install all the needed packages on your Linux machine, which are as follows:

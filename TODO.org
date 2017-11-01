@@ -8,7 +8,7 @@
 * TODO Backend
 - Add native Ruby support for extracting other types of archives (tar.gz etc)
 - Add executeable files
-- Add easy installer
+- Add easy installer (DONE!)
 - Add settings support (like in ReRuTwi with a settings.yml file)
 
 
