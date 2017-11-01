@@ -3,7 +3,10 @@
 This is a little program I am currently working on that is supposed to make the (de-)compressing of files easier. It will use one set of commands and thus makes it easier to compress or decompress files.
 
 ## Installer
-This program can be easily installed using the installer available as a Github Gist here: [Installer](https://gist.githubusercontent.com/Jeytas/c97300b44df3321d25411757ccae5399/raw/d1d246a220be98a1685978fc8473fa6f2529199d/installer.sh)(Please note that you will need to have the `git` package installed on your operating system). It will clone the repository into `~/.ruxt` and automatically set an alias for you in your .bashrc (if you do not use bash, the installer won't work properly). It will add the alias to the last line of the .bashrc and you will then be able to easily access the terminal version of RuXt by just typing 'xt' instead of a lengthy path to the ruby file.
+This program can be easily installed using the installer available as a Github Gist here: [Installer](https://gist.githubusercontent.com/Jeytas/c97300b44df3321d25411757ccae5399/raw/d1d246a220be98a1685978fc8473fa6f2529199d/installer.sh) (Please note that you will need to have the `git` package installed on your operating system). It will clone the repository into `~/.ruxt` and automatically set an alias for you in your .bashrc (if you do not use bash, the installer won't work properly). It will add the alias to the last line of the .bashrc and you will then be able to easily access the terminal version of RuXt by just typing 'xt' instead of a lengthy path to the ruby file.
+
+### Updating RuXt
+You need to automatically update your RuXt, however an alias for updating it has also been set. Simply run "updatext" anywhere in your terminal and the new version will replace the current one on your computer.
 
 ## Usage
 ### Preamble
