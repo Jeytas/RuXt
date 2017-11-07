@@ -9,12 +9,12 @@ require_relative 'lib/scripts/extract_zip.rb'
 
 options = {}
 OptionParser.new do |opt|
-  opt.on('--extract FILENAME', '-e FILENAME', '-xt FILENAME') { |o| options[:filename], options[:cmd] = o, "ext" } #-e FILENAME will extract a given archive
+  opt.on('--extract FILENAME', '-e FILENAME') { |o| options[:filename], options[:cmd] = o, "ext" } #-e FILENAME will extract a given archive
   opt.on('--compress FILENAME', '-c FILENAME') { |o| options[:filename], options[:cmd] = o, "cps" } #-c FILENAME will compress a given file / folder
   opt.on('--type TYPE', '-t TYPE') { |o| options[:type_compress] = o } #Type of format that should be used to compress a given file
   opt.on('--name NAME', "-n NAME") { |o| options[:name_save] = o } #Name the newly created archive should have
 	opt.on('--directory DIR', '-d DIR') { |o| options[:directory] = o } #Directory a given archive should extract into
-  opt.on('--help', '-h') { puts "#{opt}\n To compress a file, you need three arguments: --type TYPE (the type of archive you want to create, i.e. tar) --name NAME (the name the archive should have) --compress FILENAME (the files or directory to compress)" }
+  opt.on('--help', '-h') { puts "#{opt}\n To compress a file, you need three arguments: --type TYPE (the type of archive you want to create, i.e. tar) --name NAME (the name the archive should have) --compress FILENAME (the files or directory to compress).\n The filetypes that are currently supported for extracting files are: tar, tar.gz, zip, rar, 7z\n The filetypes that are currently supported for compressing files are: tar, zip\n Should you encounter an error anywhere, please create an issue on the Github page for this project which is https://github.com/Jeytas/RuXt" } #Some helpful information
 end.parse!
 
 case options[:cmd]
