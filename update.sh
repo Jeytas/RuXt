@@ -1,4 +1,7 @@
 #!/bin/bash
+
+if [ ! -e ~/.ruxt ]; then echo "It seems like you are trying to update your RuXt installation without actually having it installed, since the ~/.ruxt folder could not be found. Please ensure that you have correctly installed RuXt using the installer or create an issue on this project's official Github repository."; fi
+
 echo "Removing old directory"
 rm -rf ~/.ruxt
 if [ $? = 0 ]; then echo "Removing successful. Now cloning repository"; else echo "Removing unsuccessful, update aborted" && exit; fi

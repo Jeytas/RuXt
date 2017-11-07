@@ -6,7 +6,7 @@ This is a little program I am currently working on that is supposed to make the 
 This program can be easily installed using the installer available here [Installer](https://raw.githubusercontent.com/Jeytas/Installers/master/installer.sh) (Please note that you will need to have the `git` package installed on your operating system). It will clone the repository into `~/.ruxt` and automatically set an alias for you in your .bashrc (if you do not use bash, the installer won't work properly). It will add the alias to the last line of the .bashrc and you will then be able to easily access the terminal version of RuXt by just typing 'xt' instead of a lengthy path to the ruby file.
 
 ### Updating RuXt
-You need to automatically update your RuXt, however an alias for updating it has also been set. Simply run "updatext" anywhere in your terminal and the new version will replace the current one on your computer.
+You need to manually update your RuXt, however an alias for updating it has also been set. Simply run "updatext" anywhere in your terminal and the new version will replace the current one on your computer.
 
 ## Usage
 ### Preamble

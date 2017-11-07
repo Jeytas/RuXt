@@ -1,7 +1,7 @@
-#This is a small Ruby script that can be used to extract or compress an archive
+#This is a small Ruby script that can be used to extract or compress an archive.
 #It can be used in the command line by appending the flags listed below (i.e. extract.rb --extract test.tar)
 #When compressing a file you need three arguments, --type TYPE --name NAME --compress FILENAME
-#I recommend setting an alias to this .rb file in your .bashrc so it can be run without much hassle
+#I recommend setting an alias to this .rb file in your .bashrc so it can be run without much hassle or download the official installer (for bash) from the official RuXt Github repistory: https://github.com/Jeytas/RuXt which also includes a handy way to update your RuXt easily, quickly and without much hassle.
 
 require 'optparse'
 require 'zip'
