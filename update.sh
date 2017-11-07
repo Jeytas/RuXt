@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "Removing old directory"
-rm -r ~/.ruxt
+rm -rf ~/.ruxt
 if [ $? = 0 ]; then echo "Removing successful. Now cloning repository"; else echo "Removing unsuccessful, update aborted" && exit; fi
 
 git clone https://github.com/Jeytas/RuXt.git ~/.ruxt
