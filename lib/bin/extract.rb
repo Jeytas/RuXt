@@ -5,7 +5,7 @@
 
 require 'optparse'
 require 'zip'
-require_relative 'lib/scripts/extract_zip.rb'
+require_relative 'scripts/extract_zip.rb'
 
 options = {}
 OptionParser.new do |opt|
