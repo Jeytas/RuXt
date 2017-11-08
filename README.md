@@ -1,20 +1,21 @@
 # RuXt - A Ruby Extractor (and more)
 ## What is this?
 This is a little program I am currently working on that is supposed to make the (de-)compressing of files easier. It will use one set of commands and thus makes it easier to compress or decompress files.
+It currently uses all the native Linux commands for extracing and compressing files, however they can all be accessed using only one set of commands. 
 
 ## Installer
-This program can be easily installed using the installer available here [Installer](https://raw.githubusercontent.com/Jeytas/Installers/master/installer.sh) (Please note that you will need to have the `git` package installed on your operating system). It will clone the repository into `~/.ruxt` and automatically set an alias for you in your .bashrc (if you do not use bash, the installer won't work properly). It will add the alias to the last line of the .bashrc and you will then be able to easily access the terminal version of RuXt by just typing 'xt' instead of a lengthy path to the ruby file.
+This program can be easily installed using the installer available here: [Installer](https://raw.githubusercontent.com/Jeytas/Installers/master/installer.sh) (Please note that you will need to have the `git` package installed on your operating system). It will clone the repository into `~/.ruxt` and automatically set an alias for you in your .bashrc (if you do not use bash, the installer won't work properly). It will add the alias to the last line of the .bashrc and you will then be able to easily access the terminal version of RuXt by just typing 'xt' instead of a lengthy path to the ruby file.
 
 ### Updating RuXt
 You need to manually update your RuXt, however an alias for updating it has also been set. Simply run "updatext" anywhere in your terminal and the new version will replace the current one on your computer.
 
 ## Usage
 ### Preamble
-Please check whether the installation has finished correctly by typing `xt -h`. If you get some help regarding the program, then everything worked correctly.Please check whether the installation has finished correctly by typing `xt -h`. If you get some help regarding the program, then everything worked correctly.
+Please check whether the installation has finished correctly by typing `xt -h`. If you get some help regarding the program, then everything worked correctly.
 
 ### Prerequisites
 This program uses your command line to do the work. It is basically a lot of shortcuts. If you want to be able to extract everything, you also need to install all the needed packages on your Linux machine, which are as follows:
-+ ~~"unzip" and "zip"~~ (No longer needed)
++ "unzip" and "zip" (Only needed for compressing) -> 'ruby_zip' gem needed for extracting  
 + "7z" (7zip)
 + "tar"
 + "unrar"
@@ -42,7 +43,9 @@ A short explanation of the flags:
 ### GUI (0.0.1)
 I have started working on a GUI that is neither good-looking nor very functional at the moment. However, you can try it out and I also added a screenshot of the program
 <img src="https://picload.org/image/drgcpoli/2017-10-26-162453_602x401_scro.png"></img>
-If you want to use the GUI, you will need to install Shoes. I am using Shoes4, so please refer to the installation guides for that. Older Shoes versions might also work, but I haven't tested that myself.
+
+#### Prerequisites
+The GUI has been programmed using the Ruby Gem Shoes 4 which can be downloaded from Github. The program might potentially work using older versions of Shoes, however I haven't tested that myself and cannot guarantee that it will work using an older version.
 
 ### TODO
 (For a complete to-do list please refer to the TODO.org file as I update it frequently and I won't have to edit the README everytime I add something)
